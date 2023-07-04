@@ -32,6 +32,7 @@ public class App extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+        PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).edit().remove("link").apply();
         conversionListener = new AppsFlyerConversionListener() {
 
             @Override
@@ -87,7 +88,7 @@ public class App extends Application {
         config.setOnAttributionChangedListener(new OnAttributionChangedListener() {
             @Override
             public void onAttributionChanged(AdjustAttribution adjustAttribution) {
-                PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).edit().putString("ad_status",  adjustAttribution.trackerName).apply();
+                PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).edit().putString("ad_status", adjustAttribution.trackerName).apply();
 
             }
         });
