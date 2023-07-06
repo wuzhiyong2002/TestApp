@@ -57,6 +57,8 @@ public class XCBSlot implements Customer {
     public void postMessage(String eventName, String params) {
         Map<String, Object> eventValues = new HashMap<>();
         eventValues.put(AFInAppEventParameterName.PARAM_1, params);
+        Log.e(TAG, "eventName: "+eventName );
+        Log.e(TAG, "params: "+params );
         switch (eventName) {
             case "login":
                 AppsFlyerLib.getInstance().logEvent(activity.getApplicationContext(), "af_login", eventValues);

@@ -35,28 +35,29 @@ public class SplashActivity extends AppCompatActivity {
 
         @Override
         public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
+
+            //test
+            initWebView();
+
+
+            //APPSFLYER
 //            if (!Config.APPSFLYER_KEY.equals("")) {
-//                if (sharedPreferences.getString("af_status", "").equals("Organic") && !sharedPreferences.getString("link", "").equals("")) {
+//                if (sharedPreferences.getString("af_status", "").equals("Non-organic") && !sharedPreferences.getString("link", "").equals("")) {
 //                    Log.e(TAG, "af_status=" + sharedPreferences.getString("af_status", ""));
-//
 //                    initWebView();
-//                    return;
-//                }
-//            } else if (!Config.ADJUST_KEY.equals("")) {
-//                if (sharedPreferences.getString("ad_status", "").equals("Organic") && !sharedPreferences.getString("link", "").equals("")) {
-//                    Log.e(TAG, "af_status=" + sharedPreferences.getString("ad_status", ""));
-//                    initWebView();
-//                    return;
+//                } else {
+//                    goGame();
 //                }
 //            }
 
 
-//            if (!Config.APPSFLYER_KEY.equals("")) {
-//                if (sharedPreferences.getString("af_status", "").equals("Organic")) {
-//                    Log.e(TAG, "af_status=" + sharedPreferences.getString("af_status", ""));
-
-            initWebView();
-            return;
+            //ADJUST
+//            if (!Config.ADJUST_KEY.equals("")) {
+//                if (sharedPreferences.getString("ad_status", "").equals("Non-organic") && !sharedPreferences.getString("link", "").equals("")) {
+//                    Log.e(TAG, "ad_status=" + sharedPreferences.getString("ad_status", ""));
+//                    initWebView();
+//                } else {
+//                    goGame();
 //                }
 //            }
 
@@ -141,7 +142,7 @@ public class SplashActivity extends AppCompatActivity {
 
 
     private void goGame() {
-        startActivity(new Intent(this, GameActivity.class));
+        startActivity(new Intent(this, MainActivity.class));
         finish();
     }
 

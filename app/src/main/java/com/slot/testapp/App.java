@@ -67,7 +67,7 @@ public class App extends Application {
         };
 
         initAD();
-//        initAF();
+        initAF();
     }
 
     private void initAF() {
