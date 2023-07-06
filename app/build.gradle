@@ -50,7 +50,10 @@ dependencies {
     implementation 'com.squareup.okhttp3:okhttp:4.9.1'
 
     implementation 'com.alibaba:fastjson:1.2.61'
-
+    implementation("com.google.code.gson:gson:2.8.9")
+    implementation 'com.lzy.net:okgo:+'
+    implementation 'com.lzy.net:okrx2:+'
+    implementation 'com.lzy.net:okserver:+'
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
