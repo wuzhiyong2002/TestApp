@@ -1,4 +1,4 @@
-package com.slot.testapp.xiaomantou;
+package com.slot.testapp.XMT;
 
 import android.util.Log;
 import android.webkit.JavascriptInterface;
@@ -15,7 +15,7 @@ import com.slot.testapp.Customer;
 import java.lang.reflect.Type;
 import java.util.Map;
 
-public class XiaomantouSlot implements Customer {
+public class XMTBSlot implements Customer {
     private AppCompatActivity activity;
 
     @Override

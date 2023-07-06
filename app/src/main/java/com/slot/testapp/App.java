@@ -1,14 +1,9 @@
 package com.slot.testapp;
 
-import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.Application;
-import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 import android.util.Log;
-import android.webkit.WebView;
-
-import androidx.appcompat.app.AppCompatActivity;
 
 import com.adjust.sdk.Adjust;
 import com.adjust.sdk.AdjustAttribution;
@@ -19,7 +14,6 @@ import com.adjust.sdk.OnAttributionChangedListener;
 import com.appsflyer.AFLogger;
 import com.appsflyer.AppsFlyerConversionListener;
 import com.appsflyer.AppsFlyerLib;
-import com.slot.testapp.xiaomantou.XiaomantouSlot;
 
 import java.util.Map;
 import java.util.Objects;

@@ -4,12 +4,12 @@ import com.slot.testapp.NM.NMSlot;
 import com.slot.testapp.TB1.TB1Slot;
 import com.slot.testapp.XCB.XCBSlot;
 import com.slot.testapp.ku.KuSlot;
-import com.slot.testapp.xiaomantou.XiaomantouSlot;
+import com.slot.testapp.XMT.XMTBSlot;
 
 public class SimpleFactory {
     public static Customer createInstance(String type) {
         if ("xiaomantou".equals(type)) {
-            return new XiaomantouSlot();
+            return new XMTBSlot();
         } else if ("TB1".equals(type)) {
             return new TB1Slot();
         } else if ("KuSlot".equals(type)) {
