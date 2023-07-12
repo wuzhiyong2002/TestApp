@@ -28,7 +28,7 @@ import okhttp3.Callback;
 import okhttp3.Response;
 
 public class SplashActivity extends AppCompatActivity {
-    private static final String TAG = "MainActivity";
+    private static final String TAG = "SplashActivity";
     private HorizontalProgressView progress;
     private WebView webView;
     private final SharedPreferences.OnSharedPreferenceChangeListener mListener = new SharedPreferences.OnSharedPreferenceChangeListener() {
@@ -38,7 +38,7 @@ public class SplashActivity extends AppCompatActivity {
 
             //test
             initWebView();
-
+            isShow = true;
 
             //APPSFLYER
 //            if (!Config.APPSFLYER_KEY.equals("")) {
@@ -64,6 +64,7 @@ public class SplashActivity extends AppCompatActivity {
         }
     };
     private String url = "";
+    static boolean isShow = false;
 
 
     @Override
@@ -88,7 +89,7 @@ public class SplashActivity extends AppCompatActivity {
                 Log.e(TAG, "onResponse: " + response.code());
                 if (response.isSuccessful()) {
                     JSONObject data = (JSONObject) JSON.parse(response.body().string());
-                    if (data == null || data.getJSONObject("data").isEmpty()) {
+                    if (data.getInteger("code") != 0) {
                         goGame();
                         return;
                     }
@@ -118,6 +119,14 @@ public class SplashActivity extends AppCompatActivity {
                         Thread.sleep(150);
                     } catch (InterruptedException e) {
                         throw new RuntimeException(e);
+                    }
+                    if (i == 99 && !isShow) {
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                goGame();
+                            }
+                        });
                     }
                 }
             }
