@@ -1,5 +1,9 @@
-plugins {
-    id 'com.android.application'
+apply plugin: "com.android.application"
+apply plugin: 'stringfog'
+
+stringfog {
+    implementation 'com.github.megatronking.stringfog.xor.StringFogImpl'
+    enable true // 开关
 }
 
 android {
@@ -29,7 +33,7 @@ android {
 }
 
 dependencies {
-
+    implementation 'com.github.megatronking.stringfog:xor:4.0.1'
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'com.google.android.material:material:1.9.0'
 
