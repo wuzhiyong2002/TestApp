@@ -4,7 +4,7 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
+import androidx.preference.PreferenceManager;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
@@ -97,11 +97,6 @@ public class SplashActivity extends AppCompatActivity {
                     Log.e(TAG, "onResponse: " + url);
                     PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).edit().
                             putString("link", url).apply();
-//                    if (PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).getString("link", "").equals(url)) {
-//
-//                    } else {
-//
-//                    }
                 }
             }
         });

@@ -2,7 +2,7 @@ package com.slot.testapp;
 
 import android.app.Activity;
 import android.app.Application;
-import android.preference.PreferenceManager;
+import androidx.preference.PreferenceManager;
 import android.util.Log;
 
 import com.adjust.sdk.Adjust;
